@@ -43,7 +43,7 @@ class NetworksTest extends TestCase
             "name" => "lxdbr0",
             "type" => "bridge",
             "used_by" => [
-                "/1.0/containers/blah",
+                "/1.0/instances/blah",
             ],
         ];
 

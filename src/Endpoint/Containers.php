@@ -10,7 +10,7 @@ class Containers extends AbstructEndpoint
 {
     protected function getEndpoint()
     {
-        return '/containers/';
+        return '/instances/';
     }
 
     /**
@@ -501,7 +501,7 @@ class Containers extends AbstructEndpoint
 
                 foreach ($output as $log) {
                     $response['output'][] = str_replace(
-                        '/'.$this->client->getApiVersion().'/containers/'.$name.'/logs/',
+                        '/'.$this->client->getApiVersion().'/instances/'.$name.'/logs/',
                         '',
                         $log
                     );

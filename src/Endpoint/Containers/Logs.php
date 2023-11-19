@@ -8,7 +8,7 @@ class Logs extends AbstructEndpoint
 {
     protected function getEndpoint()
     {
-        return '/containers/';
+        return '/instances/';
     }
 
     /**
@@ -23,7 +23,7 @@ class Logs extends AbstructEndpoint
 
         foreach ($this->get($this->getEndpoint().$name.'/logs/') as $log) {
             $logs[] = str_replace(
-                '/'.$this->client->getApiVersion().'/containers/'.$name.'/logs/',
+                '/'.$this->client->getApiVersion().'/instances/'.$name.'/logs/',
                 '',
                 $log
             );

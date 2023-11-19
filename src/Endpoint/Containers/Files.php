@@ -8,7 +8,7 @@ class Files extends AbstructEndpoint
 {
     protected function getEndpoint()
     {
-        return '/containers/';
+        return '/instances/';
     }
 
     /**
@@ -54,7 +54,7 @@ class Files extends AbstructEndpoint
 
         return $this->post($this->getEndpoint().$name.'/files?path='.$filepath, $data, $headers);
     }
-    
+
     /**
      * Delete a file in a container
      *

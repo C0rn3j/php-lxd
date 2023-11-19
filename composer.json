@@ -47,8 +47,8 @@
     },
     "scripts": {
         "test": [
-        	"@test-phpcs",
-        	"@test-phpunit"
+          "@test-phpcs",
+          "@test-phpunit"
         ],
         "test-phpunit": "phpunit --configuration phpunit.xml",
         "test-phpcs": "phpcs -v -s --standard=PSR2 src tests"

@@ -495,8 +495,9 @@ class Containers extends AbstructEndpoint
             $waitresponse = $this->client->operations->wait($response['id']);
 
             if ($record === true) {
+                // Check with isset in case we get a NULL/broken response
                 $output = isset($waitresponse['metadata']['output']) ? $waitresponse['metadata']['output'] : [];
-                $return = $waitresponse['metadata']['return'];
+                $return = isset($waitresponse['metadata']['return']) ? $waitresponse['metadata']['return'] : [];
                 $response = [];
 
                 foreach ($output as $log) {
